@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item value="QSPI_IMGProcess_wrapper.bit" key="QSPI_IMGProcess_wrapper_hw_platform_0-bitFile"/>
+	<item value="Local" key="BRAM_Write_wrapper_hw_platform_0-target"/>
+	<item value="Local" key="BRAM_test_wrapper_hw_platform_0-target"/>
+	<item value="Local" key="BRAM_Write_wrapper_hw_platform_1-target"/>
+	<item value="" key="QSPI_IMGProcess_wrapper_hw_platform_0-bmmFile"/>
+	<item value="BRAM_test_wrapper.mmi" key="BRAM_test_wrapper_hw_platform_1-bmmFile"/>
+	<item value="BRAM_test_wrapper.bit" key="BRAM_test_wrapper_hw_platform_0-bitFile"/>
+	<item value="BRAM_test_wrapper.bit" key="BRAM_test_wrapper_hw_platform_1-bitFile"/>
+	<item value="Auto Detect" key="QSPI_IMGProcess_wrapper_hw_platform_0-device"/>
+	<item value="false" key="QSPI_IMGProcess_wrapper_hw_platform_0-partial_bit"/>
+	<item value="Auto Detect" key="BRAM_Write_wrapper_hw_platform_1-device"/>
+	<item value="BRAM_Write_wrapper.mmi" key="BRAM_Write_wrapper_hw_platform_1-bmmFile"/>
+	<item value="Auto Detect" key="BRAM_Write_wrapper_hw_platform_0-device"/>
+	<item value="false" key="BRAM_Write_wrapper_hw_platform_0-partial_bit"/>
+	<item value="BRAM_Write_wrapper.mmi" key="BRAM_Write_wrapper_hw_platform_0-bmmFile"/>
+	<item value="BRAM_Write_wrapper.bit" key="BRAM_Write_wrapper_hw_platform_0-bitFile"/>
+	<item value="false" key="BRAM_Write_wrapper_hw_platform_1-partial_bit"/>
+	<item value="BRAM_Write_wrapper.bit" key="BRAM_Write_wrapper_hw_platform_1-bitFile"/>
+	<item value="BRAM_test_wrapper.mmi" key="BRAM_test_wrapper_hw_platform_0-bmmFile"/>
+	<item value="Auto Detect" key="BRAM_test_wrapper_hw_platform_0-device"/>
+	<item value="false" key="BRAM_test_wrapper_hw_platform_0-partial_bit"/>
+	<item value="Local" key="QSPI_IMGProcess_wrapper_hw_platform_0-target"/>
+	<item value="BRAM_Write_wrapper_hw_platform_0" key="programfpga.hwplatform"/>
+	<item value="Auto Detect" key="BRAM_test_wrapper_hw_platform_1-device"/>
+	<item value="false" key="BRAM_test_wrapper_hw_platform_1-partial_bit"/>
+	<item value="Local" key="BRAM_test_wrapper_hw_platform_1-target"/>
+</section>

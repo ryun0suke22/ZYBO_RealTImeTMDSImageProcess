@@ -1,0 +1,112 @@
+#include "xparameters.h"
+#include "ff.h"
+#include <stdlib.h> 
+#include <stdio.h> 
+#include "fsbl.h"
+#include "qspi.h"
+#include "nand.h"
+#include "nor.h"
+#include "sd.h"
+#include "pcap.h"
+#include "image_mover.h"
+#include "xparameters.h"
+#include "xil_cache.h"
+#include "xil_exception.h"
+#include "xstatus.h"
+#include "fsbl_hooks.h"
+#include "xtime_l.h"
+
+#ifdef XPAR_XWDTPS_0_BASEADDR
+#include "xwdtps.h"
+#endif
+
+#ifdef STDOUT_BASEADDRESS
+#ifdef XPAR_XUARTPS_0_BASEADDR
+#include "xuartps_hw.h"
+#endif
+#endif
+
+#ifdef RSA_SUPPORT
+#include "rsa.h"
+#endif
+
+/************************** Constant Definitions *****************************/
+
+#ifdef XPAR_XWDTPS_0_BASEADDR
+#define WDT_DEVICE_ID		XPAR_XWDTPS_0_DEVICE_ID
+#define WDT_EXPIRE_TIME		100
+#define WDT_CRV_SHIFT		12
+#endif
+
+
+char *strcpy_rom(char *Dest, const char *Src)
+{
+    unsigned i;
+    for (i=0; Src[i] != '\0'; ++i)
+        Dest[i] = Src[i];
+    Dest[i] = '\0';
+    return Dest;
+}
+
+u32 loadFileFromSD(char filename[], u32 *dst)
+{
+    FIL fil;        /* File object */
+    FATFS fatfs;
+    char buffer[32];
+    char *boot_file = buffer;
+
+    // Copy from InitSD
+    FRESULT rc;
+    TCHAR *path = "0:/"; /* Logical drive number is 0 */
+
+    /* Register volume work area, initialize device */
+    rc = f_mount(&fatfs, path, 0);
+    xil_printf("SD: rc= %.8x\n\r", rc);
+
+    if (rc != FR_OK) {
+        return XST_FAILURE;
+    }
+
+    strcpy_rom(buffer, filename);
+    boot_file = (char *)buffer;
+
+    rc = f_open(&fil, boot_file, FA_READ);
+    if (rc) {
+        xil_printf("SD: Unable to open file %s: %d\n", boot_file, rc);
+        return XST_FAILURE;
+    }
+
+    // Copy from SDAccess
+    UINT br;
+
+    rc = f_lseek(&fil, 0);
+    if (rc) {
+        xil_printf("SD: Unable to seek to %x\n", 0);
+        return XST_FAILURE;
+    }
+
+    rc = f_read(&fil, (void*)dst, fil.fsize, &br);
+
+    if (rc) {
+        xil_printf("*** ERROR: f_read returned %d\r\n", rc);
+        return XST_FAILURE;
+    }
+
+    //Xil_DCacheInvalidateRange(dst, fil.fsize);
+
+    return XST_SUCCESS;
+}
+
+int main(void)
+{
+    u32 Status;
+    printf("Loading test.dat\r\n");
+    //Status = loadFileFromSD("test.dat", ((volatile unsigned int *) 0x04000000));
+    Status = loadFileFromSD("test.dat", ((u32 *) 0x04000000));
+    if ( Status != XST_SUCCESS ) {
+        printf("Fail\r\n");
+    }
+    printf("loaded\r\n");
+
+    return XST_SUCCESS;
+}

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item value="C:\Users\murakar\xup\embedded\2015_2_zynq_labs\ECE530_final_project\ECE530_final_project.sdk\fsbl\Debug\fsbl.elf" key="BRAM_Write_wrapper_hw_platform_1-fsblFile"/>
+	<item value="Local" key="BRAM_test_wrapper_hw_platform_0-target"/>
+	<item value="Local" key="BRAM_Write_wrapper_hw_platform_1-target"/>
+	<item value="qspi_single" key="BRAM_test_wrapper_hw_platform_0-flashType"/>
+	<item value="0" key="QSPI_IMGProcess_wrapper_hw_platform_0-offSet"/>
+	<item value="qspi_single" key="QSPI_IMGProcess_wrapper_hw_platform_0-flashType"/>
+	<item value="false" key="BRAM_test_wrapper_hw_platform_0-blankCheck"/>
+	<item value="true" key="QSPI_IMGProcess_wrapper_hw_platform_0-verifyFlash"/>
+	<item value="false" key="BRAM_test_wrapper_hw_platform_0-verifyFlash"/>
+	<item value="C:\Users\murakar\xup\embedded\2015_2_zynq_labs\PS_PL_coop\PS_PL_coop.sdk\ImageOverWrite_fsbl\Debug\ImageOverWrite_fsbl.elf" key="BRAM_test_wrapper_hw_platform_0-fsblFile"/>
+	<item value="Auto Detect" key="QSPI_IMGProcess_wrapper_hw_platform_0-device"/>
+	<item value="Auto Detect" key="BRAM_Write_wrapper_hw_platform_1-device"/>
+	<item value="C:\Users\murakar\xup\embedded\2015_2_zynq_labs\IMGProcess\IMGProcess.sdk\fsbl\Debug\fsbl.elf" key="QSPI_IMGProcess_wrapper_hw_platform_0-fsblFile"/>
+	<item value="false" key="BRAM_Write_wrapper_hw_platform_1-verifyFlash"/>
+	<item value="" key="BRAM_test_wrapper_hw_platform_0-offSet"/>
+	<item value="BRAM_Write_wrapper_hw_platform_1" key="programflash.hwplatform"/>
+	<item value="C:\Users\murakar\xup\embedded\2015_2_zynq_labs\ECE530_final_project\BootImage\BOOT.bin" key="BRAM_Write_wrapper_hw_platform_1-imgFile"/>
+	<item value="false" key="BRAM_Write_wrapper_hw_platform_1-blankCheck"/>
+	<item value="C:\Users\murakar\xup\embedded\2015_2_zynq_labs\PS_PL_coop\Boot_image\BOOT.bin" key="BRAM_test_wrapper_hw_platform_0-imgFile"/>
+	<item value="" key="BRAM_Write_wrapper_hw_platform_1-offSet"/>
+	<item value="Auto Detect" key="BRAM_test_wrapper_hw_platform_0-device"/>
+	<item value="false" key="QSPI_IMGProcess_wrapper_hw_platform_0-blankCheck"/>
+	<item value="Local" key="QSPI_IMGProcess_wrapper_hw_platform_0-target"/>
+	<item value="C:\Users\murakar\xup\embedded\2015_2_zynq_labs\IMGProcess\IMGProcess\BOOT.bin" key="QSPI_IMGProcess_wrapper_hw_platform_0-imgFile"/>
+	<item value="qspi_single" key="BRAM_Write_wrapper_hw_platform_1-flashType"/>
+</section>

@@ -1,0 +1,8 @@
+17:17:18 **** Incremental Build of configuration Debug for project ImgOverWrite ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+
+17:17:18 Build Finished (took 253ms)
+

@@ -1,0 +1,34 @@
+#include <stdio.h>
+#include "platform.h"
+#include "xil_io.h"
+#include "xil_printf.h"
+#include "xparameters.h"
+#include "init_bram.h"
+#define ImgH 30
+#define ImgW 25
+#define IMG_SIZE ImgH*ImgW
+#define MSB_MASK 0x1ffffff
+u32    buf[32768]; //Maximum 32K
+
+void open_img() {
+
+    int    i, size;
+    u32 mask=0;
+
+    for(i =0; i<IMG_SIZE; i++) {
+      xil_printf("buf[i]: ", buf[i]);
+        if(0==buf[i]) mask = 0;
+        else mask = MSB_MASK;
+        Xil_Out32(XPAR_BRAM_0_BASEADDR + 4*i, (mask|buf[i])); //33554431=0x1FFFFFF;
+    }
+}
+
+int main()
+{
+  xil_printf("Hello World\n\r");
+  init_platform();
+  init_bram(buf);
+  open_img();
+  cleanup_platform();
+  return 0;
+}

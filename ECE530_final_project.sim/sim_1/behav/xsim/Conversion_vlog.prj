@@ -1,0 +1,11 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../LineBuffer.srcs/sources_1/bd/LineBuf/ipshared/b65a" --include "../../../../LineBuffer.srcs/sources_1/bd/gray_scale/ipshared/b65a" --include "../../../../LineBuffer.srcs/sources_1/bd/direct_connection_grayScale/ipshared/b65a" --include "../../../../LineBuffer.srcs/sources_1/bd/pass_through/ipshared/b65a" \
+"../../../../LineBuffer.srcs/sources_1/imports/hdmi_image_process/ImgProcessMux.v" \
+"../../../../LineBuffer.srcs/sources_1/imports/hdmi_image_process/GrayScale.v" \
+"../../../../LineBuffer.srcs/sources_1/imports/hdmi_image_process/Conversion.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

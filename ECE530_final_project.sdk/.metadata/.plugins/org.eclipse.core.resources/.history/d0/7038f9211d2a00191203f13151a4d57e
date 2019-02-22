@@ -1,0 +1,53 @@
+#include <stdio.h>
+#include "platform.h"
+#include "xil_io.h"
+#include "xil_printf.h"
+#include "xparameters.h"
+#define ImgH 30
+#define ImgW 25
+#define IMG_SIZE ImgH*ImgW
+#define MSB_MASK 1000000000000000000000000
+
+void open_img(void) {
+    FILE    *fp;
+    char    buf[32768]; //Maximum 32K
+    int    i, size;
+    uint32_t mask=0;
+//    fp = fopen("img/yoshi.png", "rb");
+    fp = fopen("/mnt/yoshi.png", "rb");
+    if(fp != NULL) {
+        while(size = fread( buf, sizeof(unsigned char), 32768, fp )) {
+            //for(i = 0 ; i < size ; i++) {
+            //    printf("%c", buf[i]);
+            for(i =0; i<size; i++) {
+              if(0==buf[i]) mask = 0;
+              else mask = MSB_MASK;
+              Xil_Out32(XPAR_BRAM_0_BASEADDR + 4*i, (mask|buf[i])); //33554431=0x1FFFFFF;
+            }
+        }
+        fclose(fp);
+    } else print("Failed to file open\n");
+}
+
+int main()
+{
+    init_platform();
+
+    xil_printf("Hello World\n\r");
+    //printf("Content-type: image/jpeg\n\n");
+    print("Content-type: yoshi.png\n\n");
+    open_img();
+
+//  for(int i =0; i<IMG_SIZE; i++)
+//    Xil_Out32(XPAR_BRAM_0_BASEADDR + 4*i, 33554431); //33554431=0x1FFFFFF;
+//    Xil_Out32(XPAR_BRAM_0_BASEADDR + 4, 345);
+//    uint32_t result = 0;
+//    result = Xil_In32(XPAR_BRAM_0_BASEADDR + 0);
+//    xil_printf("BRAM[0] = %d\r\n", result);
+//    result = Xil_In32(XPAR_BRAM_0_BASEADDR + 4);
+//    xil_printf("BRAM[799] = %d\r\n", result);
+//    result = Xil_In32(XPAR_BRAM_0_BASEADDR + 799*4);
+
+    cleanup_platform();
+    return 0;
+}

@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Fri Feb  8 16:57:59 2019
+# Process ID: 17340
+# Current directory: C:/Users/murakar/xup/embedded/2015_2_zynq_labs/ECE530_final_project/ECE530_final_project.runs/BRAM_Write_ImageProcess_0_0_synth_1
+# Command line: vivado.exe -log BRAM_Write_ImageProcess_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source BRAM_Write_ImageProcess_0_0.tcl
+# Log file: C:/Users/murakar/xup/embedded/2015_2_zynq_labs/ECE530_final_project/ECE530_final_project.runs/BRAM_Write_ImageProcess_0_0_synth_1/BRAM_Write_ImageProcess_0_0.vds
+# Journal file: C:/Users/murakar/xup/embedded/2015_2_zynq_labs/ECE530_final_project/ECE530_final_project.runs/BRAM_Write_ImageProcess_0_0_synth_1\vivado.jou
+#-----------------------------------------------------------
+source BRAM_Write_ImageProcess_0_0.tcl -notrace

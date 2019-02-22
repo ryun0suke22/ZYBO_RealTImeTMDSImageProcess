@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="synth_1" LaunchPart="xc7z010clg400-1" LaunchTime="1549664536">
+  <File Type="PA-TCL" Name="BRAM_Write_wrapper.tcl"/>
+  <File Type="REPORTS-TCL" Name="BRAM_Write_wrapper_reports.tcl"/>
+  <File Type="RDS-RDS" Name="BRAM_Write_wrapper.vds"/>
+  <File Type="RDS-UTIL" Name="BRAM_Write_wrapper_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="BRAM_Write_wrapper_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="BRAM_Write_wrapper.dcp"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/imports/IMGProcess/iobuf.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../2015_2_zynq_sources/IMGProcess/iobuf.vhd"/>
+        <Attr Name="ImportTime" Val="1547964363"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/IMGProcess/AddrManager.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../2015_2_zynq_sources/IMGProcess/AddrManager.v"/>
+        <Attr Name="ImportTime" Val="1548455735"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/IMGProcess/ClockedOneShot.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../2015_2_zynq_sources/IMGProcess/ClockedOneShot.v"/>
+        <Attr Name="ImportTime" Val="1548195650"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/IMGProcess/GrayScale.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../2015_2_zynq_sources/IMGProcess/GrayScale.v"/>
+        <Attr Name="ImportTime" Val="1548351058"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/IMGProcess/ImgProcessMux.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../2015_2_zynq_sources/IMGProcess/ImgProcessMux.v"/>
+        <Attr Name="ImportTime" Val="1548098470"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/IMGProcess/LineBuffer_4lines.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../2015_2_zynq_sources/IMGProcess/LineBuffer_4lines.v"/>
+        <Attr Name="ImportTime" Val="1548129169"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/PS_PL_coop/PixelOverWrite.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../2015_2_zynq_sources/PS_PL_coop/PixelOverWrite.v"/>
+        <Attr Name="ImportTime" Val="1549662932"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/IMGProcess/emboss.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../2015_2_zynq_sources/IMGProcess/emboss.v"/>
+        <Attr Name="ImportTime" Val="1548094091"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/IMGProcess/enhancement.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../2015_2_zynq_sources/IMGProcess/enhancement.v"/>
+        <Attr Name="ImportTime" Val="1548380952"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/IMGProcess/gausian.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../2015_2_zynq_sources/IMGProcess/gausian.v"/>
+        <Attr Name="ImportTime" Val="1548042812"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/IMGProcess/laplacian.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../2015_2_zynq_sources/IMGProcess/laplacian.v"/>
+        <Attr Name="ImportTime" Val="1548094151"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/IMGProcess/lineBufBlock.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../2015_2_zynq_sources/IMGProcess/lineBufBlock.v"/>
+        <Attr Name="ImportTime" Val="1547964363"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/IMGProcess/negPosInv.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../2015_2_zynq_sources/IMGProcess/negPosInv.v"/>
+        <Attr Name="ImportTime" Val="1548351143"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/IMGProcess/sobel.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../2015_2_zynq_sources/IMGProcess/sobel.v"/>
+        <Attr Name="ImportTime" Val="1548366281"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/PS_PL_coop/ImageProcess.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../2015_2_zynq_sources/PS_PL_coop/ImageProcess.v"/>
+        <Attr Name="ImportTime" Val="1549662998"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/bd/BRAM_Write/BRAM_Write.bd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../PS_PL_coop/PS_PL_coop.srcs/sources_1/bd/BRAM_Write/BRAM_Write.bd"/>
+        <Attr Name="ImportTime" Val="1549659476"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/bd/BRAM_Write/hdl/BRAM_Write_wrapper.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../PS_PL_coop/PS_PL_coop.srcs/sources_1/bd/BRAM_Write/hdl/BRAM_Write_wrapper.v"/>
+        <Attr Name="ImportTime" Val="1549659477"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/PS_PL_coop/yoshi_24_bit_rom.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../2015_2_zynq_sources/PS_PL_coop/yoshi_24_bit_rom.v"/>
+        <Attr Name="ImportTime" Val="1549233997"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/IMGProcess/PixelOverWrite.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../2015_2_zynq_sources/IMGProcess/PixelOverWrite.v"/>
+        <Attr Name="ImportTime" Val="1548339402"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/IMGProcess/Binary.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../2015_2_zynq_sources/IMGProcess/Binary.v"/>
+        <Attr Name="ImportTime" Val="1548367652"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/IMGProcess/average.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../2015_2_zynq_sources/IMGProcess/average.v"/>
+        <Attr Name="ImportTime" Val="1547964363"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/IMGProcess/convolution.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../2015_2_zynq_sources/IMGProcess/convolution.v"/>
+        <Attr Name="ImportTime" Val="1548098693"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/IMGProcess/ev_24_bit_rom.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../2015_2_zynq_sources/IMGProcess/ev_24_bit_rom.v"/>
+        <Attr Name="ImportTime" Val="1548348288"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/IMGProcess/median.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../2015_2_zynq_sources/IMGProcess/median.v"/>
+        <Attr Name="ImportTime" Val="1547964927"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/PS_PL_coop/memory.mem">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../2015_2_zynq_sources/PS_PL_coop/memory.mem"/>
+        <Attr Name="ImportTime" Val="1549230608"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../2015_2_zynq_sources/PS_PL_coop/memery.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="BRAM_Write_wrapper"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/imports/IMGProcess/dvi2vga.xdc">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../2015_2_zynq_sources/IMGProcess/dvi2vga.xdc"/>
+        <Attr Name="ImportTime" Val="1548276543"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/imports/IMGProcess/dvi2vga.xdc"/>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
+    <Step Id="synth_design"/>
+  </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="BRAM_Write_iobuf_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="BRAM_Write_axi_bram_ctrl_0_bram_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="BRAM_Write_iobuf_1_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="BRAM_Write_axi_smc_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="BRAM_Write_axi_bram_ctrl_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="BRAM_Write_ImageProcess_0_0"/>
+</GenRun>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;fsbl_test_bsp/ps7_cortexa9_0/include/ff.h&apos; to &apos;ff.h.bk&apos;" description="Rename resource &apos;ff.h&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="ps7_cortexa9_0/include/ff.h" name="ff.h.bk" stamp="1549508734842" updateReferences="true"/>
+</session>

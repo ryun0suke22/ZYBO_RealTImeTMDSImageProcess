@@ -1,0 +1,7 @@
+#ifndef INCLUDED_Init_bram_h_
+#define INCLUDED_Init_bram_h_
+
+void init_bram();
+u32    buf[32768]; //Maximum 32K
+
+#endif

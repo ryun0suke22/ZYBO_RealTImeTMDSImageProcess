@@ -1,0 +1,40 @@
+#include <stdio.h>
+#include "platform.h"
+#include "xil_io.h"
+#include "xil_printf.h"
+#include "xparameters.h"
+#include "init_bram.h"
+//#define ramWidth 32
+#define ramWidth 128
+#define IMG_SIZE ImgH*ImgW
+#define MSB_MASK 0x1000000
+//u32    buf[32768]; //Maximum 32K
+u32    buf[32768]; //Maximum 32K
+
+void open_img() {
+
+    int    x,y;
+    u32 mask=0;
+
+    xil_printf("Image data size:\nWidthxHeight = %dx%d\n", ImgW, ImgH);
+    for(y =0; y<ramWidth; y++) {
+      for(x=0;x<ramWidth; x++) {
+        if(((ImgH>y) & (ImgW>x))) {
+        if(0==buf[y*ramWidth+x]) mask = 0;
+        else mask = MSB_MASK;
+        Xil_Out32(XPAR_BRAM_0_BASEADDR + 4*(y*ramWidth+x), 
+          (mask|buf[y*ramWidth+x])); //33554431=0x1FFFFFF;
+        }
+      }
+    }
+}
+
+int main()
+{
+  xil_printf("Image Overwrite ...\n\r");
+  init_platform();
+  init_bram(buf);
+  open_img();
+  cleanup_platform();
+  return 0;
+}
